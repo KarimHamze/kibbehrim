@@ -1,5 +1,53 @@
 {% include 'header.html' %}
 
-<h1>pedidos</h1>
+<div class="pedidos-container">
+  <h1 class="pedidos-titulo">Hace tu pedido online!</h1>
+  <button class="search-button">
+    <a href="https://wa.me/91124039409">Pedir</a>
+  </button>
+</div>
+
+<h2 class="pedidos-kibbeh">Productos</h2>
+
+<div class="pedidos-producto">
+  <article class="productos">
+    <img src="static/img/kibbeh.png" width="250" height="300" alt="kibbeh" />
+    <p>10 Unidades</p>
+    <p>Precio: 10$</p>
+  </article>
+
+  <article class="productos">
+    <img src="static/img/hummus.jpg" width="250" height="300" alt="kibbeh" />
+    <p>12 Unidades</p>
+    <p>Precio: 12$</p>
+  </article>
+
+  <article class="productos">
+    <img src="static/img/fatay.jpg" width="250" height="300" alt="kibbeh" />
+    <p>14 Unidades</p>
+    <p>Precio: 14$</p>
+  </article>
+
+  <article class="productos">
+    <img
+      src="static/img/babaganoush.jpeg"
+      width="250"
+      height="300"
+      alt="kibbeh"
+    />
+    <p>16 Unidades</p>
+    <p>Precio: 16$</p>
+  </article>
+</div>
+
+<div id="productos">
+  {% for producto in productos %}
+  <div class="producto">
+    <h2>{{ producto.nombre }}:</h2>
+    <p>{{ producto.descripcion }}</p>
+    <p>Precio: ${{ producto.precio }}</p>
+  </div>
+  {% endfor %}
+</div>
 
 {% include 'footer.html' %}

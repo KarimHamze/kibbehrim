@@ -1,0 +1,298 @@
+/* info/inicio */
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 228, 196, 0.434);
+  font-size: large;
+}
+
+/* ---------------------------------------------- */
+
+/* Nav Bar */
+header {
+  margin: -8px;
+  margin-top: -20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: brown;
+}
+
+.home {
+  font-size: 35px;
+  flex-grow: 1;
+  margin-left: 40px;
+  padding-bottom: -5px;
+}
+
+.content {
+  font-size: 25px;
+  padding-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-grow: 10;
+  justify-content: space-around;
+}
+/* ---------------------------------------------- */
+
+/* header */
+.banner {
+  margin: -8px;
+  background-color: aliceblue;
+  border: 2px solid black;
+  padding: 120px;
+  background: url(../img/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* ---------------------------------------------- */
+
+/* Index */
+
+.historia-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-historia {
+  font-size: 2em;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #d4a373;
+  padding-bottom: 10px;
+}
+
+.parrafo-historia {
+  font-size: 1.2em;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.parrafo-historia:first-of-type {
+  margin-top: 20px;
+}
+
+.historia-container p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d4a373;
+}
+
+/* ---------------------------------------------- */
+
+/* menu */
+
+.menu-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-menu {
+  font-size: 2.5em;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #d4a373;
+  padding-bottom: 10px;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #d4a373;
+}
+
+.menu-item h2 {
+  font-size: 1.8em;
+  color: #d4a373;
+  margin: 0 0 10px;
+}
+
+.menu-item p {
+  font-size: 1.2em;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------------------- */
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 228, 196, 0.434);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: large;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Lista de iconos del footer */
+.footer-icons {
+  list-style: none;
+  padding: auto;
+  font-size: larger;
+}
+
+.footer-icons li {
+  margin: 10px;
+  text-align: center;
+}
+
+/* Mapa / Copyright / Boton / Footer */
+
+.footer-map {
+  text-align: center;
+  font-size: large;
+}
+
+.footer-info {
+  padding-top: 10px;
+  text-align: center;
+  font-size: larger;
+}
+
+.footer-button {
+  font-size: x-large;
+  background-color: white;
+  color: black;
+  border: 2px solid grey;
+  border-radius: 20%;
+  transition-duration: 0.4s;
+  padding: 10px;
+}
+
+.footer-button:hover {
+  background-color: grey;
+  color: brown;
+}
+/* ---------------------------------------------- */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Pedidos */
+
+.pedidos-titulo {
+  font-size: 30px;
+}
+
+.pedidos-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pedidos-container select,
+.pedidos-container input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pedidos-kibbeh {
+  text-align: center;
+  background-color: beige;
+  padding: 10px;
+}
+
+.pedidos-producto {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: large;
+}
+
+/* ---------------------------------------------- */
+
+/* Reserva */
+
+.reserva-container {
+  display: block;
+  padding: 20px;
+}
+
+/* ---------------------------------------------- */
+
+/* Contact us */
+
+form {
+  display: block;
+}
+
+label {
+  display: block;
+  gap: 40px;
+}
+
+input,
+textarea {
+  width: 20%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contacto-centrar {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------- */

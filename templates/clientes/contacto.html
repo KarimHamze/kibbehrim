@@ -1,5 +1,18 @@
 {% include 'header.html' %}
 
-<h1>contacto...</h1>
+<h1>Contactanos</h1>
+<div class="contacto-centrar">
+  <form action="{{ url_for('contacto') }}" method="POST">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required /><br />
 
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br />
+
+    <label for="message">Mensaje:</label><br />
+    <textarea id="message" name="message" rows="4" required></textarea><br />
+
+    <button class="search-button" type="submit">Enviar</button>
+  </form>
+</div>
 {% include 'footer.html' %}
