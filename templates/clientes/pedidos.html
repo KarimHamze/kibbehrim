@@ -12,20 +12,23 @@
 <div class="pedidos-producto">
   <article class="productos">
     <img src="static/img/kibbeh.png" width="250" height="300" alt="kibbeh" />
-    <p>10 Unidades</p>
-    <p>Precio: 10$</p>
+    <h3>{{ kibbeh.nombre }}</h3>
+    <p>{{ kibbeh.descripcion }}</p>
+    <p>Precio: {{ kibbeh.precio }}$</p>
   </article>
 
   <article class="productos">
     <img src="static/img/hummus.jpg" width="250" height="300" alt="kibbeh" />
-    <p>12 Unidades</p>
-    <p>Precio: 12$</p>
+    <h3>{{ hummus.nombre }}</h3>
+    <p>{{ hummus.descripcion }}</p>
+    <p>Precio: {{ hummus.precio }}$</p>
   </article>
 
   <article class="productos">
     <img src="static/img/fatay.jpg" width="250" height="300" alt="kibbeh" />
-    <p>14 Unidades</p>
-    <p>Precio: 14$</p>
+    <h3>{{ fatay.nombre }}</h3>
+    <p>{{ fatay.descripcion }}</p>
+    <p>Precio: {{ fatay.precio }}$</p>
   </article>
 
   <article class="productos">
@@ -35,19 +38,10 @@
       height="300"
       alt="kibbeh"
     />
-    <p>16 Unidades</p>
-    <p>Precio: 16$</p>
+    <h3>{{ babaganoush.nombre }}</h3>
+    <p>{{ babaganoush.descripcion }}</p>
+    <p>Precio: {{ babaganoush.precio }}$</p>
   </article>
-</div>
-
-<div id="productos">
-  {% for producto in productos %}
-  <div class="producto">
-    <h2>{{ producto.nombre }}:</h2>
-    <p>{{ producto.descripcion }}</p>
-    <p>Precio: ${{ producto.precio }}</p>
-  </div>
-  {% endfor %}
 </div>
 
 {% include 'footer.html' %}

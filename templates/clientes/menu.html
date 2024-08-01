@@ -2,30 +2,12 @@
 
 <div class="menu-container">
   <h1 class="titulo-menu">Menú</h1>
+  {% for platos in menu %}
   <div class="menu-item">
-    <h2>Kibbeh</h2>
-    <p>Ingredientes: Carne de res, bulgur, cebolla, menta, piñones.</p>
+    <h2>{{ platos.comida }}</h2>
+    <p>Ingredientes: {{ platos.ingrediente }}</p>
   </div>
-  <div class="menu-item">
-    <h2>Hummus</h2>
-    <p>Ingredientes: Garbanzos, tahini, ajo, jugo de limón, aceite de oliva.</p>
-  </div>
-  <div class="menu-item">
-    <h2>Fatay</h2>
-    <p>Ingredientes: Carne de res, cebolla, tomate, especias.</p>
-  </div>
-  <div class="menu-item">
-    <h2>Babaganoush</h2>
-    <p>Ingredientes: Berenjena, tahini, ajo, jugo de limón, aceite de oliva.</p>
-  </div>
-  <div class="menu-item">
-    <h2>Falafel</h2>
-    <p>Ingredientes: Garbanzos, cebolla, ajo, cilantro, comino.</p>
-  </div>
-  <div class="menu-item">
-    <h2>Tabbouleh</h2>
-    <p>Ingredientes: Perejil, tomate, cebolla, bulgur, menta, jugo de limón.</p>
-  </div>
+  {% endfor %}
 </div>
 
 {% include 'footer.html' %}

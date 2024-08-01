@@ -1,21 +1,34 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
+import mysql.connector
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:0806@localhost:3306/tienda_online'
 db = SQLAlchemy(app)
 
-class Productos(db.Model):
+class Menu(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(100))
-    descripcion = db.Column(db.String(200))
-    precio = db.Column(db.Float)
+    comida = db.Column(db.String(100))
+    ingrediente = db.Column(db.String(1000))
 
-    def __init__(self, nombre, descripcion, precio):
-        self.nombre = nombre
-        self.descripcion = descripcion
-        self.precio = precio
+    def __init__(self, comida, ingrediente):
+        self.comida = comida
+        self.ingrediente = ingrediente
+
+def get_data():
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="0806",
+        database="tienda_online"
+    )
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM productos")
+    data = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return data
 
 @app.route('/')
 def index():
@@ -23,13 +36,17 @@ def index():
 
 @app.route('/pedidos')
 def pedidos():
-    productos = Productos.query.all()
-    return render_template('clientes/pedidos.html', productos=productos)
-
+    data = get_data()
+    kibbeh = data[0]
+    hummus = data[1]
+    fatay = data[2]
+    babaganoush = data[3]
+    return render_template('clientes/pedidos.html', kibbeh=kibbeh, hummus=hummus, fatay=fatay, babaganoush=babaganoush)
 
 @app.route('/menu')
 def promociones():
-    return render_template('clientes/menu.html')
+    menu = Menu.query.all()
+    return render_template('clientes/menu.html', menu=menu)
 
 @app.route('/reserva')
 def menu():
